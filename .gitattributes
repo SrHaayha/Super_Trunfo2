@@ -1,4 +1,3 @@
-@ -0,0 +1,134 @@
 #include <stdio.h>
 #include <string.h>
 
@@ -48,8 +47,8 @@ float compararAtributo(struct Carta carta1, struct Carta carta2, int atributoEsc
     switch (atributoEscolhido) {
         case 1: // População
             printf("Atributo: População\n");
-            valor1 = carta1.populacao;
-            valor2 = carta2.populacao;
+            valor1 = (float) carta1.populacao; // Conversão explícita para float
+            valor2 = (float) carta2.populacao; // Conversão explícita para float
             break;
         case 2: // Área
             printf("Atributo: Área\n");
@@ -63,8 +62,8 @@ float compararAtributo(struct Carta carta1, struct Carta carta2, int atributoEsc
             break;
         case 4: // Pontos Turísticos
             printf("Atributo: Pontos Turísticos\n");
-            valor1 = carta1.pontosTuristicos;
-            valor2 = carta2.pontosTuristicos;
+            valor1 = (float) carta1.pontosTuristicos; // Conversão explícita para float
+            valor2 = (float) carta2.pontosTuristicos; // Conversão explícita para float
             break;
         case 5: // Densidade Demográfica (inverte a lógica)
             printf("Atributo: Densidade Demográfica (menor vence)\n");
